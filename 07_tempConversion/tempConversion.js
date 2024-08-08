@@ -9,3 +9,5 @@ module.exports = {
   convertToCelsius,
   convertToFahrenheit
 };
+
+// Take notes here first:
