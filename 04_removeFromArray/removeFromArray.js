@@ -1,11 +1,11 @@
 const removeFromArray = function(listArr, ...otherArgs) {
     for (let element in otherArgs){
-        if (otherArgs[element] in listArr){
+        while (otherArgs[element] in listArr){
             const index = listArr.indexOf(otherArgs[element]);
             const x = listArr.splice(index, 1);
-            return(listArr)
         }
     }
+    return(listArr)
 };
 
 
