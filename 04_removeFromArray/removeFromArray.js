@@ -1,12 +1,15 @@
 const removeFromArray = function(listArr, ...otherArgs) {
     for (let element in otherArgs){
-        while (otherArgs[element] in listArr){
-            const index = listArr.indexOf(otherArgs[element]);
-            const x = listArr.splice(index, 1);
+        if (!(otherArgs[element] in listArr)){
+            continue;
+        } else if (otherArgs[element] in listArr){
+                const index = listArr.indexOf(otherArgs[element]);
+                const x = listArr.splice(index, 1);
         }
     }
     return(listArr)
-};
+}
+
 
 
 
@@ -14,4 +17,4 @@ const removeFromArray = function(listArr, ...otherArgs) {
 module.exports = removeFromArray;
 
 // Take notes here first:
-// It may be the case that I can assign the arr and the other value to variables 
+// See mdn loops
