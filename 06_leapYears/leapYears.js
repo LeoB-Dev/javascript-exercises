@@ -15,3 +15,5 @@ const leapYears = function(year) {
 module.exports = leapYears;
 
 // Take notes here first:
+
+// divide these into always, never 
